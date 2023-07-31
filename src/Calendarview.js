@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "./App.css";
 import Calendar from 'react-calendar';
 
 function Calendars() {

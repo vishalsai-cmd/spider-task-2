@@ -42,22 +42,22 @@ export default class Signup extends Component {
                 <h3 style={{marginLeft:100}}>sign up</h3>
 
                 <div>
-                    <label>first name</label>
+                    <label>first name:</label>
                     <input type="text" placeholder="first name" style={{borderRadius:0.3,marginLeft:50,marginBottom:25}} onChange={(e) =>this.setState({fname:e.target.value})}/>
                     <br />
                 </div>
                 <div>
-                    <label>last name</label>
+                    <label>last name:</label>
                     <input type="text" placeholder="last name" style={{borderRadius:0.3,marginLeft:50,marginBottom:25}}  onChange={(e) => this.setState({lname:e.target.value})}/>
                     <br />
                 </div>
                 <div>
-                    <label>email</label>
+                    <label>email:</label>
                     <input type="text" placeholder="email" style={{borderRadius:0.3,marginLeft:75,marginBottom:25}} onChange={(e) => this.setState({email:e.target.value})}/>
                     <br />
                 </div>
                 <div>
-                    <label>password</label>
+                    <label>password:</label>
                     <input type="text" placeholder="password" style={{borderRadius:0.3,marginLeft:50,marginBottom:25}} onChange={(e) => this.setState({password:e.target.value})}/>
                     <br />
                 </div>
