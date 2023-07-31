@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import "./App.css";
 export default class Signup extends Component {
     constructor(props){
         super(props);
@@ -36,33 +37,35 @@ export default class Signup extends Component {
     }
     render(){
         return(
+          <div className="form2">
             <form onSubmit={this.handleSubmit}>
-                <h3>sign up</h3>
+                <h3 style={{marginLeft:100}}>sign up</h3>
 
                 <div>
                     <label>first name</label>
-                    <input type="text" placeholder="first name" style={{borderRadius:0.3}} onChange={(e) =>this.setState({fname:e.target.value})}/>
+                    <input type="text" placeholder="first name" style={{borderRadius:0.3,marginLeft:50,marginBottom:25}} onChange={(e) =>this.setState({fname:e.target.value})}/>
                     <br />
                 </div>
                 <div>
                     <label>last name</label>
-                    <input type="text" placeholder="last name" style={{borderRadius:0.3}}  onChange={(e) => this.setState({lname:e.target.value})}/>
+                    <input type="text" placeholder="last name" style={{borderRadius:0.3,marginLeft:50,marginBottom:25}}  onChange={(e) => this.setState({lname:e.target.value})}/>
                     <br />
                 </div>
                 <div>
                     <label>email</label>
-                    <input type="text" placeholder="email" style={{borderRadius:0.3}} onChange={(e) => this.setState({email:e.target.value})}/>
+                    <input type="text" placeholder="email" style={{borderRadius:0.3,marginLeft:75,marginBottom:25}} onChange={(e) => this.setState({email:e.target.value})}/>
                     <br />
                 </div>
                 <div>
                     <label>password</label>
-                    <input type="text" placeholder="password" style={{borderRadius:0.3}} onChange={(e) => this.setState({password:e.target.value})}/>
+                    <input type="text" placeholder="password" style={{borderRadius:0.3,marginLeft:50,marginBottom:25}} onChange={(e) => this.setState({password:e.target.value})}/>
                     <br />
                 </div>
-                <button type="submit">Sign Up</button>
-                <p>did not register?</p>
-                <a href="/sign-in">sign in</a>
+                <button type="submit" style={{marginLeft:100}}>Sign Up</button>
+                <p>already registered?</p>
+                <a href="/" style={{textDecoration:"none",marginLeft:100}}>Login</a>
             </form>
+          </div>        
         )
     }
 }

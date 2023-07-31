@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import "./App.css"
 export default class Login extends Component{
     constructor(props){
         super(props);
@@ -37,22 +38,23 @@ export default class Login extends Component{
     }
     render(){
         return(
-            <div>
+            <div className="form">
             <form onSubmit={this.handleSubmit}>
-                <h3>Log in</h3>
+                <h3 style={{marginLeft:100}}>Log in</h3>
                 <div>
-                    <label>email</label>
-                    <input type="email" placeholder="email" style={{borderRadius:0.3}} onChange={(e) =>this.setState({email:e.target.value})} />
+                    <label>email:</label>
+                    <input type="email" placeholder="email" style={{borderRadius:0.3,marginBottom:20,marginLeft:45}} onChange={(e) =>this.setState({email:e.target.value})} />
                     <br />
                 </div>
                 <div>
-                    <label>password</label>
-                    <input type="password" placholder="password" style={{borderRadius:0.3}} onChange={(e) =>this.setState({password:e.target.value})}/>
+                    <label>password:</label>
+                    <input type="password" placholder="password" style={{borderRadius:0.3,marginBottom:20,marginLeft:30}} onChange={(e) =>this.setState({password:e.target.value})}/>
                     <br />
                 </div>
-                <button type="submit">log in</button>
+                <button type="submit" style={{marginLeft:100}}>log in</button>
+                <p>did not register?</p>
             </form>
-            <a href="/Signup">Signup</a>
+            <a href="/Signup" style={{marginLeft:100,textDecoration:"none"}}>Signup</a>
             </div>
         )
     }

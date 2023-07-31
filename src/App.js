@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import User from "./UserDetails";
 import Assignmnent from "./Assignment";
 import Calendar from "./Calendar";
+import Calendars from "./Calendarview";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
          <Route path="/UserDetails" element={<User />}></Route>
          <Route path="/Assignment" element={<Assignmnent />}></Route>
          <Route path="/Calendar" element={<Calendar />}></Route>
+         <Route path="/Calendars" element={<Calendars />} />
         </Routes>
       </Router>
     </div>

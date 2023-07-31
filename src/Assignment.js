@@ -1,4 +1,7 @@
 import React,{Component} from "react";
+import "./App.css";
+import { useState } from "react";
+import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
 export default class Assignment extends Component {
     constructor(props){
         super(props);
@@ -32,11 +35,15 @@ export default class Assignment extends Component {
     render(){
         return(
             <div>
-                Email<h1>{this.state.userData.email}</h1>
-                 <h1>{this.state.userData.duedate}</h1>
-                 <h1>{this.state.userData.course}</h1>
-                <a href="./QuizChallenge">challenge quiz</a>
+                <div className="form3">
+                 Email:<h1 style={{marginBottom:70}}>{this.state.userData.email}</h1>
+                 <h1 style={{marginBottom:70}}>{this.state.userData.email}</h1>
+                 dudate:<h1 style={{marginBottom:70}}>{this.state.userData.duedate}</h1>
+                 course:<h1 style={{marginBottom:120}}>{this.state.userData.course}</h1>
+                 <a href="./Calendars" style={{marginLeft:130,textDecoration:"none"}}>Calendar View</a>
+                </div>
             </div>
+               
         )
     }
 }

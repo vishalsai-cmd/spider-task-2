@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import axios from "axios";
+import "./App.css";
 
 function Calendar() {
     const [summary,setSummary]=useState("");
@@ -29,11 +30,14 @@ function Calendar() {
 
     }
   return (
-    <div>
+    <div className='form2'>
       <form onSubmit={submit}>
-        <input type="text" placeholder="enter summary" onChange={(e) =>{setSummary(e.target.value)}} />
-        <input type="text" placeholder="enter description" onChange={(e)=>{setDescription(e.target.value)}} />
-        <button type="submit">create event</button>
+        <input type="text" placeholder="enter summary" style={{marginTop:40,marginLeft:50,height:20}} onChange={(e) =>{setSummary(e.target.value)}} />
+        <input type="text" placeholder="enter description" style={{marginTop:40,marginLeft:50,height:20}} onChange={(e)=>{setDescription(e.target.value)}} />
+        <input type="datetime-local" style={{marginTop:40,marginLeft:50,height:20}} placeholder="startDate" />
+        <input type="datetime-local" style={{marginTop:40,marginLeft:50,height:20}} plceholder="EndDate" />
+        <br />
+        <button type="submit" style={{marginTop:40,marginLeft:70}}>create event</button>
       </form>
     </div>
   )
